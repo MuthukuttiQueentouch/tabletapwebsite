@@ -6,114 +6,180 @@
   <title>My Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar row">
-      <div class="logo column">MySite</div>
-      <ul class="nav-links row">
-        <li class="column"><a href="#home">Home</a></li>
-        <li class="column"><a href="#about">About</a></li>
-        <li class="column"><a href="#services">Services</a></li>
-        <li class="column"><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-<section id="home" class="hero12">
-  <div class="row">
-
-    <!-- Left side Heading + description + buttons -->
-    <div class="label">
-      <h1 class="heading-text">
-        <span class="text-wrapper">Table</span>
-        <span class="span">Smart Ordering Made Easy!</span>
-      </h1>
-
-      <div class="hero-description">
-        TableTap is your smart solution for effortless dining! Discover restaurants,
-        book tables instantly, explore menus, and enjoy a seamless dining experience — 
-        all in one app. Tap, dine & relax with TableTap.
-      </div>
-
-      <div class="app-buttons">
-        <!-- Google Play -->
-        <a href="#" class="store-btn google">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
-        </a>
-
-        <!-- App Store -->
-        <a href="#" class="store-btn apple">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
-        </a>
-      </div>
-    </div>
-
-    <!-- Right side SVG animation -->
-   <!-- Right scroll section -->
-  <div class="hero-svg-scroll">
-    <div class="svg-wrapper first">
-      <img src="assets/icons/l1.svg" alt="icon1">
-    </div>
-    <div class="svg-wrapper second">
-      <img src="assets/icons/l2.svg" alt="icon2">
-    </div>
-    <div class="svg-wrapper third">
-      <img src="assets/icons/l3.svg" alt="icon3">
-    </div>
-  </div>
-
-  </div>
-</section>
-
-<section>
-  
-  <div style="height: 0px;"></div> <!-- like SizedBox -->
-    <section id="fse" class="fse">
-    <div class="about-text column">
-      <h2>Smart Dining, Simplified</h2>
-    <p>Book tables, explore menus & enjoy dining — all in one tap with TableTap..</p>
-    </div>
-  </section>
-  
-
-  <!-- 3. Features Section -->
-<section class="features">
-    <!-- Feature 1 -->
-    <div class="feature">
-      <!-- Circle Icon -->
-        <img src="assets/icons/1.svg" alt="Feature 1 Icon" class="icon">
-      <h2>Fast Performance</h2>
-      <p>Our system runs smoothly with optimized speed and reliability.</p>
-    </div>
-
-    <!-- Feature 2 -->
-    <div class="feature">
-      <!-- Star Icon -->
-       <img src="assets/icons/2.svg" alt="Feature 1 Icon" class="icon">
-      <h2>Quality Design</h2>
-      <p>We provide user-friendly interfaces with a clean design.</p>
-    </div>
-
-    <!-- Feature 3 -->
-    <div class="feature">
-      <!-- Checkmark Icon -->
-      <img src="assets/icons/3.svg" alt="Feature 1 Icon" class="icon">
-      <h2>Trusted Security</h2>
-      <p>Your data is protected with top-notch security protocols.</p>
-    </div>
-</section>
- <div style="height: 50px;"></div> <!-- like SizedBox -->
-<section class="orders-section">
  
 
-  <div class="circle-wrapper">
-    <div class="circle-outer"></div>
-    <div class="circle-inner"></div>
+  <!-- Navbar -->
+ <header class="site-header">
+  <div class="header-left">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/icons/tabletap.svg" alt="Logo">
+      <span>TableTap</span>
+    </div>
 
-    <!-- Center SVG Icon -->
-    <img class="center-icon" src="assets/icons/orderlist.svg" alt="order icon" />
+    <!-- Navigation -->
+    <nav class="nav-menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Pricing</a>
+    </nav>
   </div>
-   <div class="orders-wrapper">
+
+  <!-- Right Side Buttons -->
+  <div class="header-right">
+    <a href="#" class="btn-link">Log In</a>
+    <a href="#" class="btn-filled">Get Started</a>
+  </div>
+</header>
+
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero12">
+      <div class="row">
+        <!-- Left side Heading + description + buttons -->
+        <div class="label">
+          <h1 class="heading-text">
+            <span class="text-wrapper">Table</span>
+            <span class="span">Smart Ordering Made Easy!</span>
+          </h1>
+
+          <div class="hero-description">
+            TableTap is your smart solution for effortless dining! Discover restaurants,
+            book tables instantly, explore menus, and enjoy a seamless dining experience — 
+            all in one app. Tap, dine & relax with TableTap.
+          </div>
+
+          <div class="app-buttons">
+            <!-- Google Play -->
+            <a href="#" class="store-btn google">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Download on Google Play">
+            </a>
+
+            <!-- App Store -->
+            <a href="#" class="store-btn apple">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store">
+            </a>
+          </div>
+        </div>
+
+        <!-- Right side SVG animation -->
+        <div class="hero-svg-scroll">
+          <div class="svg-wrapper first">
+            <img src="assets/icons/l1.svg" alt="Icon 1 Animation">
+          </div>
+          <div class="svg-wrapper second">
+            <img src="assets/icons/l2.svg" alt="Icon 2 Animation">
+          </div>
+          <div class="svg-wrapper third">
+            <img src="assets/icons/l3.svg" alt="Icon 3 Animation">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacer Section -->
+    <section id="fse" class="fse">
+      <div class="about-text">
+        <h2>Smart Dining, Simplified</h2>
+        <p>Book tables, explore menus & enjoy dining — all in one tap with TableTap.</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="feature">
+        <img src="assets/icons/1.svg" alt="Fast Performance Icon" class="icon">
+        <h2>Fast Performance</h2>
+        <p>Our system runs smoothly with optimized speed and reliability.</p>
+      </div>
+
+      <div class="feature">
+        <img src="assets/icons/2.svg" alt="Quality Design Icon" class="icon">
+        <h2>Quality Design</h2>
+        <p>We provide user-friendly interfaces with a clean design.</p>
+      </div>
+
+      <div class="feature">
+        <img src="assets/icons/3.svg" alt="Trusted Security Icon" class="icon">
+        <h2>Trusted Security</h2>
+        <p>Your data is protected with top-notch security protocols.</p>
+      </div>
+    </section>
+
+    <!-- Orders Section -->
+    <section class="orders-section">
+      <div class="circle-wrapper">
+        <div class="circle-outer"></div>
+        <div class="circle-inner"></div>
+        <img class="center-icon" src="assets/icons/orderlist.svg" alt="Order List Icon" />
+      </div>
+
+      <div class="orders-wrapper">
+        <h1>All Orders at a Glance</h1>
+        <p class="orders-desc">
+          Manage every order from one screen — track status, reduce delays, and keep servers & kitchen connected in real time.
+        </p>
+
+        <div class="order-point">
+          <div class="order-dot"></div>
+          <p>Quick view of active & completed orders</p>
+        </div>
+
+        <div class="order-point">
+          <div class="order-dot"></div>
+          <p>Real-time sync between servers and kitchen</p>
+        </div>
+      </div>
+    </section>
+    <section class="running-tables">
+  <!-- First Row: Title + Subtitle -->
+  <div class="running-header">
+    <h2 class="section-title">Running Tables Overview</h2>
+    <p class="section-subtitle">
+      Stay updated with all active tables in real time and manage dining flow with ease.
+    </p>
+  </div>
+
+  <!-- Center Circle + Device -->
+  <div class="running-center">
+    <div class="bg-circle"></div>
+    <div class="device-img">
+      <img src="assets/icons/orderlist.svg" alt="Device Mockup">
+    </div>
+
+    <!-- Info Circles -->
+    <div class="info-circle circle1">
+      <div class="icon">1</div>
+      <h3>Live Status</h3>
+      <p>See which tables are active instantly.</p>
+    </div>
+    <div class="info-circle circle2">
+      <div class="icon">2</div>
+      <h3>Table Availability</h3>
+      <p>Identify free vs occupied tables quickly.</p>
+    </div>
+    <div class="info-circle circle3">
+      <div class="icon active">3</div>
+      <h3>Order Tracking</h3>
+      <p>Check and manage orders linked with each active table.</p>
+    </div>
+    <div class="info-circle circle4">
+      <div class="icon">4</div>
+      <h3>Team Sync</h3>
+      <p>Enhance coordination between staff and kitchen for smooth service.</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- tabels view -->
+  <section class="orders-section row">
+  <!-- Left: Orders Content -->
+  <div class="orders-wrapper column">
     <h1>All Orders at a Glance</h1>
     <p class="orders-desc">
       Manage every order from one screen — track status, reduce delays, and keep servers & kitchen connected in real time.
@@ -129,41 +195,285 @@
       <p>Real-time sync between servers and kitchen</p>
     </div>
   </div>
+
+  <!-- Right: Animated Circle + Center Image -->
+  <div class="circle-wrapper column">
+    <div class="circle-outer"></div>
+    <div class="circle-inner"></div>
+    <img class="center-icon" src="assets/icons/orderlist.svg" alt="Order List Icon" />
+  </div>
 </section>
+<!-- menu section -->
 
-  <!-- About Section -->
-  <section id="about" class="about row">
-    <div class="about-text column">
-      <h2>About Us</h2>
-      <p>We are passionate designers and developers building modern websites.</p>
-    </div>
-  </section>
+    <section class="menu-section">
+      <div class="menu-wrapper">
+        <div class="menucircle-outer"></div>
+        <div class="menucircle-inner"></div>
+        <img class="menucenter-icon" src="assets/icons/orderlist.svg" alt="Order List Icon" />
+      </div>
 
-  <!-- Services Section -->
-  <section id="services" class="services row">
-    <div class="service-card column">
-      <h3>Web Design</h3>
-      <p>Modern and responsive website design with best practices.</p>
+      <div class="orders-wrapper">
+        <h1>All Orders at a Glance</h1>
+        <p class="orders-desc">
+          Manage every order from one screen — track status, reduce delays, and keep servers & kitchen connected in real time.
+        </p>
+
+        <div class="order-point">
+          <div class="order-dot"></div>
+          <p>Quick view of active & completed orders</p>
+        </div>
+
+        <div class="order-point">
+          <div class="order-dot"></div>
+          <p>Real-time sync between servers and kitchen</p>
+        </div>
+      </div>
+    </section>
+   
+
+      <!-- screen shot sliders -->
+<section>
+  
+<!-- Outer wrapper with background -->
+<div class="slider-outer">
+  
+  <div class="app-slider">
+    <div class="running-header">
+    <h2 class="section-title">Running Tables Overview</h2>
+    <p class="section-subtitle">
+      Stay updated with all active tables in real time and manage dining flow with ease.
+    </p>
+  </div>
+
+    <button class="slide-left">&#10094;</button>
+    
+    <div class="slides-wrapper">
+      <div class="slide"><img src="assets/icons/orderlist.svg" alt="slide1"></div>
+      <div class="slide"><img src="assets/icons/orderlist.svg" alt="slide2"></div>
+      <div class="slide"><img src="assets/icons/orderlist.svg" alt="slide3"></div>
     </div>
-    <div class="service-card column">
-      <h3>Development</h3>
-      <p>Clean and scalable code for web and mobile platforms.</p>
-    </div>
-    <div class="service-card column">
-      <h3>UI/UX</h3>
-      <p>Intuitive and user-friendly interface with smooth experience.</p>
-    </div>
-    <!-- App Download Buttons -->
+
+    <button class="slide-right">&#10095;</button>
+  </div>
+</div>
 
 
-  </section>
+</section>
+<!-- plans lsider -->
+<section class="plansswiper">
+  <h2>choose your plan</h2>
+  <p>Frybix delivered blazing fast performance, striking word solution</p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact row">
-    <div class="contact-text column">
-      <h2>Contact Us</h2>
-      <p>Email: contact@mysite.com</p>
+  <div class="swiper-container">
+    <div class="plan-card starter">
+      <h3>Starter plan</h3>
+      <ul>
+        <li>Live chat</li>
+        <li>5GB hosting</li>
+        <li>2 website 3 sub domains</li>
+      </ul>
+      <h4>$9.99/weekly</h4>
+      <p>Up to 5 user + 1.99 per user</p>
+      <button>Sign up</button>
     </div>
-  </section>
+
+    <div class="plan-card silver">
+      <h3>Silver plan</h3>
+      <ul>
+        <li>Live chat</li>
+        <li>5GB hosting</li>
+        <li>2 website 3 sub domains</li>
+        <li>Email & live chat</li>
+        <li>Backlinks</li>
+      </ul>
+      <h4>$19.99/weekly</h4>
+      <p>Up to 5 user + 1.99 per user</p>
+      <button>Sign up</button>
+    </div>
+
+    <div class="plan-card gold">
+      <h3>Gold</h3>
+      <ul>
+        <li>Live chat</li>
+        <li>5GB hosting</li>
+        <li>2 website 3 sub domains</li>
+      </ul>
+      <h4>$29.99/weekly</h4>
+      <p>Up to 5 user + 1.99 per user</p>
+      <button>Sign up</button>
+    </div>
+  </div>
+</section>
+<!-- testimonial section -->
+ <section class="testimonial-section">
+  <h2>What our happy client say</h2>
+  <p>Things that make it the best place to start trading</p>
+
+  <!-- Swiper Container -->
+  <div class="testimonial-swiper">
+    <div class="testimonial-card">
+      <img src="assets/icons/client1.svg" alt="client" />
+      <h3>Robin Ayala Doe</h3>
+      <p>Why truly, I’ve found the JOY of cooking. It’s the point at which my better half does it. There is no sincerer love than the adoration for sustenance.</p>
+    </div>
+
+    <div class="testimonial-card active">
+      <img src="assets/icons/client2.svg" alt="client" />
+      <h3>John De marli</h3>
+      <p>Many individuals have eaten in this kitchen and have proceeded to lead normal, solid lives. The route to a man’s heart is through his stomach.</p>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="assets/icons/client2.svg" alt="client" />
+      <h3>Rowhan Smith</h3>
+      <p>You don’t need to cook extravagant or muddled perfect works of art, simply great sustenance from new fixings.</p>
+    </div>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <div class="testimonial-nav">
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+  </div>
+</section>
+<!-- promotions sections -->
+ <section class="promotion-section">
+  <div class="promotion-bg"></div>
+
+  <!-- Left Side (Mobile Images) -->
+  <div class="promotion-left">
+    <div class="circle"></div>
+    <img src=assets/icons/orderlist.svg class="phone phone-1" alt="phone1" />
+    <img src=assets/icons/orderlist.svg class="phone phone-2" alt="phone2" />
+  </div>
+
+  <!-- Right Side (Text + Buttons) -->
+  <div class="promotion-right">
+    <h2>Try Now on Android & iOS</h2>
+    <p>
+      Get TableTap now on Google Play for Android and App Store for iOS.  
+      Enjoy smarter dining and restaurant management anytime, anywhere.
+    </p>
+
+    <div class="store-buttons">
+      <!-- Google Play -->
+      <a href="#" class="store-btn google-play">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+      </a>
+
+      <!-- App Store -->
+      <a href="#" class="store-btn app-store">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
+
+    <!-- Header Row -->
+    <div class="running-header">
+      <h2>Get in Touch With Our Team</h2>
+      <p>Have questions or feedback? Share your details and we’ll connect with you quickly.</p>
+    </div>
+
+    <!-- Form + Map Row -->
+    <div class="contact-content">
+      <!-- Left Side - Form -->
+      <div class="contact-form">
+        <form>
+          <div class="form-row">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+          </div>
+
+          <div class="form-row">
+            <input type="text" placeholder="Phone no">
+            <input type="text" placeholder="Subject">
+          </div>
+
+          <div class="form-row full-width">
+            <textarea placeholder="Message*" required></textarea>
+          </div>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      <!-- Right Side - Map -->
+      <div class="contact-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.523785342815!2d76.9558328146227!3d11.01684459215556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8595f3b5e61b7%3A0x3d24dba74b1b9a5d!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1679652051234!5m2!1sen!2sin"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Logo + Contact -->
+    <div class="footer-brand">
+      <img src="assets/icons/bizzui.svg" alt="logo" class="footer-logo" />
+      <p>Queentouchtech.com</p>
+      <p>+1 234 456 678 89</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-col">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Bookings</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Product -->
+    <div class="footer-col">
+      <h3>Product</h3>
+      <ul>
+        <li><a href="#">Take tour</a></li>
+        <li><a href="#">Live chat</a></li>
+        <li><a href="#">Reviews</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Newsletter</h3>
+      <p>Stay up to date</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 QueenTouch Technology. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  </main>
+  <script src="slider.js"></script>
+
+
 </body>
+
 </html>
