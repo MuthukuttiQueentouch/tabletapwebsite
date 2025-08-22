@@ -939,6 +939,32 @@ font-weight: 100;
   z-index: 2;
  
 }
+
+.nav-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.nav-btn.prev {
+  background: #feeded;
+  color: #999;
+}
+
+.nav-btn.next {
+  background: #c9151e;
+  color: #fff;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+}
+
 /* Common style for both buttons */
 .swiper-button-prev,
 .swiper-button-next {
