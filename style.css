@@ -818,50 +818,62 @@ font-weight: 100;
 }
 
 
-/* tables */
-/* menu section */
 
+/* menu section */
 .menu-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* icon left, text right */
   align-items: center;
-  padding: 100px;
+  padding-bottom: 60px; /* top-bottom 100px, left-right 50px */
 }
+
+/* wrapper for menu icon */
 .menu-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  display: flex;
+  justify-content: center; /* center the icon inside wrapper */
+  align-items: center;
+  flex: 0.5; /* left side takes space */
 }
 
-.menucircle-outer {
+/* filled circle behind center icon */
+.icon-circle {
+  position: absolute;
+  width: 420px;   /* adjust size */
+  height: 420px;
+  background-color: #C9151E; /* filled color */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;  /* center in wrapper */
+  transform: translate(-50%, -50%) scale(0.8);
   opacity: 0;
-  transform: translateX(-100px) scale(0.8);
-  filter: blur(8px);
-  animation: menuCircleIn 1s forwards ease-out;
-  animation-delay: 0.3s; /* adjust delay as needed */
+  animation: circleIn 1s forwards ease-out;
+  animation-delay: 0.3s;
+  z-index: 0; /* behind icon */
 }
 
-
+/* center icon */
 .menucenter-icon {
+  width: 380px;  /* big size */
+  height: 510px;
+  position: relative;
+  z-index: 1;
   opacity: 0;
   transform: translateX(-150px) scale(0.9);
   filter: blur(10px);
   animation: menuIconIn 1s forwards ease-out;
-  animation-delay: 0.6s; /* sequential effect */
+  animation-delay: 0.6s;
 }
 
-/* keyframes for circle */
-@keyframes menuCircleIn {
+/* circle animation */
+@keyframes circleIn {
   to {
     opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
-/* keyframes for center icon */
+/* center icon animation */
 @keyframes menuIconIn {
   to {
     opacity: 1;
@@ -869,17 +881,24 @@ font-weight: 100;
     filter: blur(0);
   }
 }
+
+/* right side text wrapper */
+
 /* screen shot slider */
 .slider-outer {
+  height: 590px;   /* 👈 Fixed height mention panniruken */
   background-color: #fff5f5;
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
+  overflow: hidden; /* Extra content cut aagum */
 }
 
 .section-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #C9151E;
+  font-size: 48px;
+  font-weight: 600;
+  color: #272727;
+  margin-top: 0px;
+  opacity: 0; /* start la hide */
 }
 
 .section-subtitle {
@@ -888,15 +907,15 @@ font-weight: 100;
   color: #333;
 }
 
-/* Swiper slides */
+/* Swiper wrapper */
 .swiper {
   width: 80%;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
+/* Each slide */
 .swiper-slide {
- 
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -906,79 +925,120 @@ font-weight: 100;
 }
 
 .swiper-slide img {
-  width: 100%;
+  width: 200px;
   height: auto;
   display: block;
   border-radius: 12px;
+  transition: all 0.4s ease;
 }
 
-/* center slide zoom */
-.swiper-slide-active {
-  transform: scale(1.1);
+/* Active slide ku periya size */
+.swiper-slide-active img {
+  width: 230px; /* big size */
+  height: auto;
   z-index: 2;
+ 
 }
-
-/* navigation buttons */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #C9151E;
-  background: white;
+/* Common style for both buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 35px;              /* 👈 circle size proper */
+  height: 35px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
+  cursor: pointer;
+  display: flex;             /* 👈 center arrow */
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
-.swiper-button-next:hover,
+/* Control arrow size inside */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 14px;   /* 👈 small arrow inside circle */
+  font-weight: bold;
+  line-height: 1;    /* 👈 avoid overflow */
+}
+
+/* Prev button → Light bg + Dark arrow */
+.swiper-button-prev {
+  background: #feeded;
+  color: #c9151e !important;
+}
+
+/* Next button → Dark bg + White arrow */
+.swiper-button-next {
+  background: #c9151e;
+  color: #fff !important;
+}
+
+/* Hover effect → invert colors */
 .swiper-button-prev:hover {
-  background: #C9151E;
-  color: white;
+  background: #c9151e;
+  color: #fff !important;
+}
+.swiper-button-next:hover {
+  background: #feeded;
+  color: #c9151e !important;
 }
 
 
-/* plans slider */
+/* Plans Slider Section */
 .plansswiper {
   text-align: center;
-  padding: 60px 0;
-  background: white;
+  padding: 60px 40px;
+  background: #fff;
+  height: 700px;   /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .plansswiper h2 {
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 600;
+  color: #272727;
   margin-bottom: 10px;
+  opacity: 1;
 }
 
 .plansswiper p {
   color: #444;
   font-size: 18px;
   margin-bottom: 40px;
+  opacity: 1;
 }
 
 /* Swiper Container */
 .swiper-container {
-  background-color: white;
   display: flex;
-  gap: 20px;
+  justify-content: center;   /* 👈 center la maintain */
+  gap: 40px;                 /* 👈 equal spacing between cards */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 20px;
+  padding: 20px 40px;
   scroll-behavior: smooth;
+  background: #fff;
+  width: 100%;
 }
 
+.swiper-container::-webkit-scrollbar {
+  display: none; /* scrollbar hide */
+}
+
+/* Individual Plan Card */
 .plan-card {
-  flex: 0 0 70%;
-  max-width: 380px;
+  flex: 0 0 320px;          /* 👈 fixed width (consistent size) */
   padding: 40px 30px;
   border-radius: 24px;
   border: 1px solid rgba(0,0,0,0.2);
-  background: white;
+  background: #fff;
   text-align: left;
   scroll-snap-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
 }
 
 .plan-card h3 {
@@ -1003,63 +1063,51 @@ font-weight: 100;
   font-weight: 800;
   margin: 20px 0 10px;
 }
-
 .plan-card button {
   margin-top: 15px;
   padding: 12px 30px;
   border-radius: 8px;
   font-weight: 600;
-  border: none;
+  border: 2px solid #C9151E;   /* 👈 red border */
   cursor: pointer;
+  background: #fff;            /* 👈 white bg */
+  color: #C9151E;              /* 👈 red text */
+  transition: all 0.3s ease;
 }
 
-/* Center highlight */
-.plan-card:focus,
-.plan-card:target,
-.plan-card:active {
-  background: #C9151E;   /* highlight red */
-  color: white;
-  transform: scale(1.05);
-}
-
-.plan-card:focus h3,
-.plan-card:focus h4,
-.plan-card:focus li,
-.plan-card:focus p {
-  color: white;
-}
-/* --- Your existing styles stay same --- */
-
-/* Always highlight 2nd card (centre one by default) */
-/* Keep 2nd card always red + white text */
-.swiper-container .plan-card:nth-child(2),
-.swiper-container .plan-card:nth-child(2):hover {
+/* Active / Selected Card */
+.plan-card.active {
   background: #C9151E;
-  color: white;
+  color: #fff;
   transform: scale(1.05);
+  z-index: 2;
 }
 
-.swiper-container .plan-card:nth-child(2) h3,
-.swiper-container .plan-card:nth-child(2) h4,
-.swiper-container .plan-card:nth-child(2) li,
-.swiper-container .plan-card:nth-child(2) p {
-  color: white;
+.plan-card.active h3,
+.plan-card.active h4,
+.plan-card.active li,
+.plan-card.active p {
+  color: #fff;
 }
 
-
-
-.plan-card:hover {
-  background: #f5f5f5;   /* light grey on hover */
-  transform: scale(1.03);
+.plan-card.active button {
+  background: #fff;     /* white bg */
+  color: #C9151E;       /* red text */
+  border: 2px solid #fff; /* 👈 invert border */
 }
 
-/* text color reset for hover cards */
-.plan-card:hover h3,
-.plan-card:hover h4,
-.plan-card:hover li,
-.plan-card:hover p {
+/* Hover (only for non-active) */
+.plan-card:hover:not(.active) {
+  background: #f5f5f5;
+}
+
+.plan-card:hover:not(.active) h3,
+.plan-card:hover:not(.active) h4,
+.plan-card:hover:not(.active) li,
+.plan-card:hover:not(.active) p {
   color: #000;
 }
+
 
 
 /* testimonial section */
@@ -1071,8 +1119,8 @@ font-weight: 100;
 
 .testimonial-section h2 {
   font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 10px;
+  font-weight: 600;
+  color: #272727;
 }
 
 .testimonial-section p {
@@ -1142,7 +1190,7 @@ font-weight: 100;
   height: 45px;
   border-radius: 50%;
   border: none;
-  font-size: 22px;
+  font-size: 12px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: 0.3s;
@@ -1164,8 +1212,8 @@ font-weight: 100;
 
 /* promotion sections */
 .promotion-section {
-  width: 100%;
-  height: 750px;
+
+  height: 550px;
   position: relative;
   background: rgba(255, 179, 179, 0.14);
   display: flex;
@@ -1185,13 +1233,13 @@ font-weight: 100;
 } */
 
 .circle {
-  width: 550px;
-  height: 540px;
+  width: 530px;
+  height: 530px;
   background: #c9151e;
   border-radius: 50%;
   position: absolute;
   top: 70px;
-  left: 100px;
+  left: 110px;
 }
 
 .phone {
@@ -1199,17 +1247,17 @@ font-weight: 100;
 }
 
 .phone-1 {
-  width: 413px;
+  width: 223px;
   transform: rotate(7deg);
-  left: 300px;
-  top: 40px;
+  left: 350px;
+  top: 100px;
 }
 
 .phone-2 {
-  width: 510px;
+  width: 260px;
   transform: rotate(-4deg);
-  left: 120px;
-  
+  left: 168px;
+    top: 60px;
   bottom: 0;
 }
 
@@ -1410,8 +1458,8 @@ button:hover {
 
 .newsletter-form {
   display: flex;
-  background: white;
-  border-radius: 50px;
+  /* background: white;
+  border-radius: 50px; */
   box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
@@ -1424,6 +1472,19 @@ button:hover {
   font-size: 16px;
   color: #333;
 }
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* input & button gap */
+}
+
+.newsletter-form input {
+  flex: 1; /* input width full ah stretch aagum */
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+}
 
 .newsletter-form input::placeholder {
   color: #a8a8a8;
@@ -1434,11 +1495,13 @@ button:hover {
   border: none;
   color: white;
   font-weight: 700;
-  padding: 0 25px;
+  padding: 10px 70px;
   cursor: pointer;
   border-radius: 50px;
   transition: 0.3s;
+  white-space: nowrap; /* button text break aagama irukum */
 }
+
 
 .newsletter-form button:hover {
   background: #a40f16;

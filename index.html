@@ -185,9 +185,12 @@ Check tables, explore menus & enjoy dining — all in one tap with TableTap
   </div>
 </section>
 
+<!-- Empty space of 20px -->
+<div style="height: 40px;"></div>
 
     <!-- tabels view -->
   <section class="orders-section row">
+    <div style="width:  80px;"></div>
   <!-- Left: Orders Content -->
   <div class="orders-wrapper column">
     <h1>Available Table Selection</h1>
@@ -216,11 +219,14 @@ Check tables, explore menus & enjoy dining — all in one tap with TableTap
 <!-- menu section -->
 
     <section class="menu-section">
-      <div class="menu-wrapper">
-        <div class="menucircle-outer"></div>
-        <div class="menucircle-inner"></div>
-        <img class="menucenter-icon" src="assets/icons/orderlist.svg" alt="Order List Icon" />
-      </div>
+    <div class="menu-wrapper">
+  <!-- single filled circle behind icon -->
+  <div class="icon-circle"></div>
+
+  <!-- center icon -->
+  <img class="menucenter-icon" src="assets/icons/menu.svg" alt="Menu Icon" />
+</div>
+
 
       <div class="orders-wrapper">
         <h1>All Orders at a Glance</h1>
@@ -239,35 +245,27 @@ Check tables, explore menus & enjoy dining — all in one tap with TableTap
         </div>
       </div>
     </section>
-   
+   <!-- screenshot slider -->
+<section class="slider-outer">
+  <h2 class="section-title">App Screenshots</h2>
+  <p class="section-subtitle">Take a quick look at our smooth UI design</p>
 
-      <!-- screen shot sliders -->
-       <section class="slider-outer">
-  <h2 class="section-title">Screenshot Slider</h2>
-  <p class="section-subtitle">Swipe through screenshots of our app</p>
-
-  <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/icons/orderlist.svg" alt="Slide 1">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/icons/orderlist.svg" alt="Slide 2">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/icons/orderlist.svg" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="assets/icons/orderlist.svg" alt="Slide 4">
-      </div>
+      <div class="swiper-slide"><img src="assets/icons/running.svg" alt="Screen 1"></div>
+      <div class="swiper-slide"><img src="assets/icons/running.svg" alt="Screen 2"></div>
+      <div class="swiper-slide"><img src="assets/icons/running.svg" alt="Screen 3"></div>
+      <div class="swiper-slide"><img src="assets/icons/running.svg"alt="Screen 4"></div>
+      <div class="swiper-slide"><img src="assets/icons/running.svg" alt="Screen 5"></div>
     </div>
-    <!-- navigation buttons -->
+
+    <!-- navigation arrows -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
 </section>
-<!--  -->
+
+
 <!-- plans lsider -->
 <section class="plansswiper">
   <h2>choose your plan</h2>
@@ -505,6 +503,7 @@ Check tables, explore menus & enjoy dining — all in one tap with TableTap
 <script src="hdtext.js"></script>
 <script src="features.js"></script>
 <script src="running.js"></script>
+<script src="plans.js"></script>
 <script src="orders.js"></script>
 </body>
 
