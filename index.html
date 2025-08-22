@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+  <!-- Include Swiper.js CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -43,7 +49,7 @@
         <!-- Left side Heading + description + buttons -->
         <div class="label">
           <h1 class="heading-text">
-            <span class="text-wrapper">Table</span>
+            <span class="text-wrapper">TableTab</span>
             <span class="span">Smart Ordering Made Easy!</span>
           </h1>
 
@@ -81,32 +87,34 @@
       </div>
     </section>
 
-    <!-- Spacer Section -->
-    <section id="fse" class="fse">
-      <div class="about-text">
-        <h2>Smart Dining, Simplified</h2>
-        <p>Book tables, explore menus & enjoy dining — all in one tap with TableTap.</p>
-      </div>
-    </section>
+    <!-- heading title -->
+     <section>
+      <div class="running-header">
+    <h2 class="section-title">Smart Dining, Simplified</h2>
+    <p class="section-subtitle">
+Check tables, explore menus & enjoy dining — all in one tap with TableTap
+    </p>
+  </div>
+   </section>
 
     <!-- Features Section -->
     <section class="features">
       <div class="feature">
         <img src="assets/icons/1.svg" alt="Fast Performance Icon" class="icon">
-        <h2>Fast Performance</h2>
-        <p>Our system runs smoothly with optimized speed and reliability.</p>
+        <h2>Easy Dine Flow</h2>
+        <p> Streamline orders, track tables, and connect servers with kitchens in real time.</p>
       </div>
 
       <div class="feature">
         <img src="assets/icons/2.svg" alt="Quality Design Icon" class="icon">
-        <h2>Quality Design</h2>
-        <p>We provide user-friendly interfaces with a clean design.</p>
+        <h2>Table to Kitchen</h2>
+        <p>Manage tables, orders, and kitchen workflows — all in one simple app.</p>
       </div>
 
       <div class="feature">
         <img src="assets/icons/3.svg" alt="Trusted Security Icon" class="icon">
-        <h2>Trusted Security</h2>
-        <p>Your data is protected with top-notch security protocols.</p>
+        <h2>Serve Smart</h2>
+        <p>Simplify order flow and boost efficiency with smart server-kitchen management.</p>
       </div>
     </section>
 
@@ -135,6 +143,8 @@
         </div>
       </div>
     </section>
+
+    <!-- runnning  -->
     <section class="running-tables">
   <!-- First Row: Title + Subtitle -->
   <div class="running-header">
@@ -148,7 +158,7 @@
   <div class="running-center">
     <div class="bg-circle"></div>
     <div class="device-img">
-      <img src="assets/icons/orderlist.svg" alt="Device Mockup">
+      <img src="assets/icons/running.svg" alt="Device Mockup">
     </div>
 
     <!-- Info Circles -->
@@ -169,7 +179,7 @@
     </div>
     <div class="info-circle circle4">
       <div class="icon">4</div>
-      <h3>Team Sync</h3>
+      <h3>kitchen Sync</h3>
       <p>Enhance coordination between staff and kitchen for smooth service.</p>
     </div>
   </div>
@@ -180,19 +190,19 @@
   <section class="orders-section row">
   <!-- Left: Orders Content -->
   <div class="orders-wrapper column">
-    <h1>All Orders at a Glance</h1>
+    <h1>Available Table Selection</h1>
     <p class="orders-desc">
-      Manage every order from one screen — track status, reduce delays, and keep servers & kitchen connected in real time.
+     Browse indoor and outdoor tables, pick the right spot, and create new dine-in orders instantly.
     </p>
 
     <div class="order-point">
       <div class="order-dot"></div>
-      <p>Quick view of active & completed orders</p>
+      <p>Indoor & Outdoor Choices – Customers can select their preferred seating easily.</p>
     </div>
 
     <div class="order-point">
       <div class="order-dot"></div>
-      <p>Real-time sync between servers and kitchen</p>
+      <p>Instant Order Creation – Start a new dine-in order right after table selection.</p>
     </div>
   </div>
 
@@ -200,7 +210,7 @@
   <div class="circle-wrapper column">
     <div class="circle-outer"></div>
     <div class="circle-inner"></div>
-    <img class="center-icon" src="assets/icons/orderlist.svg" alt="Order List Icon" />
+    <img class="center-icon" src="assets/icons/tables.svg" alt="Order List Icon" />
   </div>
 </section>
 <!-- menu section -->
@@ -232,33 +242,32 @@
    
 
       <!-- screen shot sliders -->
-<section>
-  
-<!-- Outer wrapper with background -->
-<div class="slider-outer">
-  
-  <div class="app-slider">
-    <div class="running-header">
-    <h2 class="section-title">Running Tables Overview</h2>
-    <p class="section-subtitle">
-      Stay updated with all active tables in real time and manage dining flow with ease.
-    </p>
-  </div>
+       <section class="slider-outer">
+  <h2 class="section-title">Screenshot Slider</h2>
+  <p class="section-subtitle">Swipe through screenshots of our app</p>
 
-    <button class="slide-left">&#10094;</button>
-    
-    <div class="slides-wrapper">
-      <div class="slide"><img src="assets/icons/orderlist.svg" alt="slide1"></div>
-      <div class="slide"><img src="assets/icons/orderlist.svg" alt="slide2"></div>
-      <div class="slide"><img src="assets/icons/orderlist.svg" alt="slide3"></div>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="assets/icons/orderlist.svg" alt="Slide 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/icons/orderlist.svg" alt="Slide 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/icons/orderlist.svg" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/icons/orderlist.svg" alt="Slide 4">
+      </div>
     </div>
-
-    <button class="slide-right">&#10095;</button>
+    <!-- navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-</div>
-
-
 </section>
+<!--  -->
 <!-- plans lsider -->
 <section class="plansswiper">
   <h2>choose your plan</h2>
@@ -473,7 +482,30 @@
   </main>
   <script src="slider.js"></script>
 
-
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 2,
+      }
+    }
+  });
+</script>
+<script src="hdtext.js"></script>
+<script src="features.js"></script>
+<script src="running.js"></script>
+<script src="orders.js"></script>
 </body>
 
 </html>
